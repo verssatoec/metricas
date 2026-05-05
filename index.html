@@ -171,7 +171,43 @@
 
             <div class="form-group">
                 <label for="vendedor">Nombre del Vendedor</label>
-                <input type="text" id="vendedor" name="vendedor" placeholder="Ej: Mateo Josue Gonzalez">
+                <select id="vendedor" name="vendedor">
+    <option value="">Seleccione Vendedor</option>
+    <option value="Christian Medina">Christian Medina</option>
+    <option value="Cristina Encalada">Cristina Encalada</option>
+    <option value="Daysi Reyes">Daysi Reyes</option>
+    <option value="Elisabeth Guiracocha">Elisabeth Guiracocha</option>
+    <option value="Emely Gavilanez">Emely Gavilanez</option>
+    <option value="Eulalia Naranjo">Eulalia Naranjo</option>
+    <option value="Evelin Hidrovo">Evelin Hidrovo</option>
+    <option value="Evelyn Cuji">Evelyn Cuji</option>
+    <option value="Gabriela Figueroa">Gabriela Figueroa</option>
+    <option value="Ginger Tillanguando">Ginger Tillanguando</option>
+    <option value="Hilda Chalco">Hilda Chalco</option>
+    <option value="Javier Garcia">Javier Garcia</option>
+    <option value="Jessica Molina">Jessica Molina</option>
+    <option value="Lesly Ramirez">Lesly Ramirez</option>
+    <option value="Libardo Yela">Libardo Yela</option>
+    <option value="Lily Cristina Jaramillo">Lily Cristina Jaramillo</option>
+    <option value="Marcela Salazar">Marcela Salazar</option>
+    <option value="Maria del Carmen Buestan">Maria del Carmen Buestan</option>
+    <option value="Maria del Carmen Mejia">Maria del Carmen Mejia</option>
+    <option value="Mayra Cristina Yanez">Mayra Cristina Yanez</option>
+    <option value="Mayra Granda">Mayra Granda</option>
+    <option value="Melanie Rodriguez">Melanie Rodriguez</option>
+    <option value="Monica Beatriz Quizhpi">Monica Beatriz Quizhpi</option>
+    <option value="Nayeli Zambrano">Nayeli Zambrano</option>
+    <option value="Robinson Carrion">Robinson Carrion</option>
+    <option value="Rosana Elizabeth Lopez">Rosana Elizabeth Lopez</option>
+    <option value="Samantha Aguilar">Samantha Aguilar</option>
+    <option value="Silvia Pilar Moncayo">Silvia Pilar Moncayo</option>
+    <option value="Veronica Jurado">Veronica Jurado</option>
+    <option value="Veronica Rodriguez">Veronica Rodriguez</option>
+    <option value="Veronica Ulloa">Veronica Ulloa</option>
+    <option value="Yarina Moreta">Yarina Moreta</option>
+    <option value="Yulexi Choez">Yulexi Choez</option>
+    <option value="Zuani Erazo">Zuani Erazo</option>
+</select>
             </div>
 
             <div class="section-title">Tráfico total en Tienda</div>
@@ -226,7 +262,7 @@ document.getElementById("enviarBtn").addEventListener("click", function() {
     btn.innerText = "ENVIANDO DATOS, POR FAVOR ESPERE..";
     btn.disabled = true;
 
-    fetch("https://script.google.com/macros/s/AKfycbz5485n2iuF6qQ6aFy0vzw1sIU2_e5IUqOvl_FVyUoboAxjp9GPPNoltEvMY8zHZa2n4Q/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzIXqZreKZLX5MzfBRO9kigxjKOH7b-f-_eIStuLYM7tCKakcrktJBqOyGD7CE0PRJ-gg/exec", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
