@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Registro KPIs - Verssato</title>
+    
+    <!-- Configuración para iPhone / Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Verssato KPI">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/aOSGzTG.png">
+    
+    <!-- Favicon para Navegadores -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/upCEy1O.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verssato-red: #e60000;
+            --bg-color: #f0f2f5;
+            --text-color: #2d3436;
+            --white: #ffffff;
+            --border-color: #dfe6e9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 450px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .header-logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header-logo img {
+            max-width: 160px;
+            height: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--verssato-red);
+            padding-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            -webkit-appearance: none;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--verssato-red);
+            box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.1);
+        }
+
+        .grid-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--verssato-red);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--verssato-red);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(230, 0, 0, 0.2);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header-logo">
+            <img src="https://i.imgur.com/aOSGzTG.png" alt="Logo Verssato">
+        </div>
+
+        <h2>Analisis de Desempeño General</h2>
+        
+        <form id="kpiForm">
+            <div class="form-group">
+                <label for="tienda">Tienda Regional</label>
+                <select id="tienda" name="tienda">
+                    <option value="">Seleccione Tienda / Sucursal</option>
+                    <option value="MALL DEL RIO">MALL DEL RIO</option>
+                    <option value="MONAY">MONAY</option>
+                    <option value="BATAN">BATAN</option>
+                    <option value="PADRE AGUIRRE">PADRE AGUIRRE</option>
+                    <option value="BOLIVAR">BOLIVAR</option>
+                    <option value="OUTLET">OUTLET</option>
+                    <option value="MALTERIA-LATACUNGA">MALTERIA-LATACUNGA</option>
+                    <option value="EL RECREO">EL RECREO</option>
+                    <option value="EL PORTAL">EL PORTAL</option>
+                    <option value="QUICENTRO">QUICENTRO</option>
+                    <option value="SANTO DOMINGO">SANTO DOMINGO</option>
+                    <option value="MALL DEL NORTE">MALL DEL NORTE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="vendedor">Nombre del Vendedor</label>
+                <input type="text" id="vendedor" name="vendedor" placeholder="Ej: Mateo Josue Gonzalez">
+            </div>
+
+            <div class="section-title">Tráfico total en Tienda</div>
+            <div class="grid-inputs">
+                <div class="form-group">
+                    <label>Cantidad de Grupos</label>
+                    <input type="number" id="grupos" value="0">
+                </div>
+                <div class="form-group">
+                    <label>Cantidad de Personas</label>
+                    <input type="number" id="personas" value="0">
+                </div>
+            </div>
+
+            <div class="section-title">Resultados Totales de Ventas</div>
+            <div class="grid-inputs">
+                <div class="form-group">
+                    <label>Ventas Realizadas</label>
+                    <input type="number" id="venta" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Cantidad de Productos</label>
+                    <input type="number" id="productos" placeholder="0">
+                </div>
+            </div>
+
+            <button type="button" id="enviarBtn">ENVIAR DATOS A VERSSATO</button>
+        </form>
+
+        <p class="footer-text">Supervisión Nacional Verssato &copy; 2026</p>
+    </div>
+
+<script>
+document.getElementById("enviarBtn").addEventListener("click", function() {
+
+    const btn = document.getElementById("enviarBtn");
+
+    const data = {
+        tienda: document.getElementById("tienda").value,
+        vendedor: document.getElementById("vendedor").value,
+        grupos: document.getElementById("grupos").value,
+        personas: document.getElementById("personas").value,
+        venta: document.getElementById("venta").value,
+        productos: document.getElementById("productos").value
+    };
+
+    if (!data.tienda || !data.vendedor) {
+        alert("Por favor completa Tienda y Vendedor");
+        return;
+    }
+
+    btn.innerText = "ENVIANDO DATOS, POR FAVOR ESPERE..";
+    btn.disabled = true;
+
+    fetch("https://script.google.com/macros/s/AKfycbz5485n2iuF6qQ6aFy0vzw1sIU2_e5IUqOvl_FVyUoboAxjp9GPPNoltEvMY8zHZa2n4Q/exec", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "data=" + encodeURIComponent(JSON.stringify(data))
+    })
+    .then(res => res.text())
+    .then(() => {
+
+        document.body.innerHTML = `
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                font-family:Poppins;
+                text-align:center;
+                flex-direction:column;
+                background:#f0f2f5;
+            ">
+                <h2 style="color:#e60000;">✅ DATOS ENVIADOS</h2>
+                <p>El registro fue guardado correctamente</p>
+                <button onclick="location.reload()" style="
+                    margin-top:20px;
+                    padding:12px 20px;
+                    border:none;
+                    border-radius:10px;
+                    background:#e60000;
+                    color:white;
+                    font-weight:bold;
+                ">
+                    NUEVO REGISTRO
+                </button>
+            </div>
+        `;
+    })
+    .catch(error => {
+        console.error(error);
+        alert("❌ Error al enviar datos");
+
+        btn.innerText = "ENVIAR DATOS A VERSSATO";
+        btn.disabled = false;
+    });
+
+});
+</script>
+</body>
+</html>
